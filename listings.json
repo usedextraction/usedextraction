@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "name": "Wiped Film Evaporator — 6 inch",
+      "category": "Wiped Film",
+      "specs": "Stainless 316L · 2024 · ~1.5 L/hr throughput",
+      "price": "$48,500 OBO",
+      "status": "Available",
+      "image": ""
+    },
+    {
+      "name": "Ethanol Falling Film — 50L",
+      "category": "Ethanol",
+      "specs": "Solvent recovery · 2023 · ~15 gal/hr",
+      "price": "$31,000",
+      "status": "Available",
+      "image": ""
+    },
+    {
+      "name": "Closed-Loop Hydrocarbon — 20lb",
+      "category": "Hydrocarbon",
+      "specs": "C1D1 rated · 2022 · Fully jacketed",
+      "price": "$22,750",
+      "status": "Sold",
+      "image": ""
+    }
+  ]
+}
