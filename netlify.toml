@@ -1,0 +1,9 @@
+# Static site — no build step. Netlify serves the repo root and
+# auto-detects the contact form on deploy.
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/admin"
+  to = "/admin/"
+  status = 301
