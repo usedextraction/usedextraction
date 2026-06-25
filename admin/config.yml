@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Where uploaded photos are stored in the repo, and how the site links to them
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "inventory"
+    label: "Equipment Inventory"
+    delete: false
+    files:
+      - name: "listings"
+        label: "Equipment Listings"
+        file: "listings.json"
+        description: "Add, edit, or remove equipment. Each item appears in the Inventory section of the website."
+        fields:
+          - label: "Listings"
+            name: "items"
+            label_singular: "Listing"
+            widget: "list"
+            summary: "{{fields.name}} — {{fields.status}}"
+            fields:
+              - { label: "Equipment name", name: "name", widget: "string", hint: "e.g. Wiped Film Evaporator — 6 inch" }
+              - { label: "Category", name: "category", widget: "select", options: ["Wiped Film", "Ethanol", "Hydrocarbon", "Post-Processing"], required: false }
+              - { label: "Specs", name: "specs", widget: "string", required: false, hint: "e.g. Stainless 316L · 2024 · ~1.5 L/hr" }
+              - { label: "Price", name: "price", widget: "string", required: false, hint: "e.g. $48,500 OBO. Leave blank to show 'Inquire for price'." }
+              - { label: "Status", name: "status", widget: "select", options: ["Available", "Pending", "Sold", "Hidden"], default: "Available", hint: "Choose 'Hidden' to take an item off the site without deleting it." }
+              - { label: "Photo", name: "image", widget: "image", required: false, choose_url: false }
