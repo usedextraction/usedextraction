@@ -23,6 +23,14 @@
       "price": "$22,750",
       "status": "Sold",
       "image": ""
+    },
+    {
+      "status": "Available",
+      "name": "Chemtech KD6 Wiped Film Evaporator",
+      "category": "Wiped Film",
+      "specs": "Manufacturer Chemtech Model KD6 Type Wiped Film Evaporator Terpene Strip 1–2 L/hr First Pass 1 L/hr Vacuum Pump Leybold Turbo Power 230V 3-Phase Control Panel UL Listed — Apex Industrial Location Anaheim, CA",
+      "price": "67000",
+      "image": "/images/uploads/kd6-1.jpg"
     }
   ]
 }
