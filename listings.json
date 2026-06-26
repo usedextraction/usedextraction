@@ -31,6 +31,14 @@
       "specs": "Manufacturer Chemtech Model KD6 Type Wiped Film Evaporator Terpene Strip 1–2 L/hr First Pass 1 L/hr Vacuum Pump Leybold Turbo Power 230V 3-Phase Control Panel UL Listed — Apex Industrial Location Anaheim, CA",
       "price": "67000",
       "image": "/images/uploads/kd6-1.jpg"
+    },
+    {
+      "status": "Available",
+      "name": "Just 2nd Example",
+      "category": "Hydrocarbon",
+      "specs": "316l, gmp, asme, automated",
+      "price": "400000",
+      "image": "/images/uploads/670e3e69-a260-490f-964f-469655fe74c8.jpeg"
     }
   ]
 }
