@@ -42,3 +42,4 @@ collections:
               - { label: "Price", name: "price", widget: "string", required: false, hint: "e.g. $48,500 OBO. Leave blank to show 'Inquire for price'." }
               - { label: "Status", name: "status", widget: "select", options: ["Available", "Pending", "Sold", "Hidden"], default: "Available", hint: "Choose 'Hidden' to take an item off the site without deleting it." }
               - { label: "Photo", name: "image", widget: "image", required: false, choose_url: false }
+              - { label: "Feature on homepage", name: "featured", widget: "boolean", default: false, required: false, hint: "Show this machine as the big hero image at the top of the homepage. Needs a photo." }
