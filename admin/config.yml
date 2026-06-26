@@ -1,8 +1,22 @@
+# DecapBridge PKCE auth — replaces deprecated Netlify Git Gateway
 backend:
   name: git-gateway
+  repo: HaveyDylan/usedextraction
   branch: main
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/67ee2ce7-cf25-401b-af12-12eb342b21c0/pkce
+  auth_token_endpoint: /sites/67ee2ce7-cf25-401b-af12-12eb342b21c0/token
+  gateway_url: https://gateway.decapbridge.com
 
-# Where uploaded photos are stored in the repo, and how the site links to them
+auth:
+  email_claim: email
+  first_name_claim: first_name
+  last_name_claim: last_name
+  avatar_url_claim: avatar_url
+
+site_url: https://usedextraction1.netlify.app
+
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
