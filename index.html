@@ -171,6 +171,279 @@
   </div>
 </section>
 
+<!-- CONTACT (Web3Forms) -->
+<section id="contact">
+  <div class="wrap">
+    <div class="contact-grid">
+      <div>
+        <div class="head" style="margin-bottom:22px"><span class="eyebrow">Get in touch</span><h2>Request a quote</h2><p>Tell us what you're looking for and we'll get back to you within one business day.</p></div>
+        <div class="info-card">
+          <h3>Talk to a specialist</h3>
+          <div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.07 4.18 2 2 0 0 1 5.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span><div><b>(714) 555-0123</b><span>Mon–Fri, 8am–5pm PT</span></div></div>
+          <div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><div><b>sales@usedextraction.com</b><span>We reply within 24 hours</span></div></div>
+          <div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Anaheim, California</b><span>Warehouse visits by appointment</span></div></div>
+        </div>
+      </div>
+
+      <!-- Web3Forms — free form-to-email. Submissions are emailed to sales@usedextraction.com. -->
+      <form action="https://api.web3forms.com/submit" method="POST" class="form">
+        <input type="hidden" name="access_key" value="c2f72d91-e1c0-4787-bb4e-e5425dd65dc6">
+        <input type="hidden" name="subject" value="New quote request — Used Extraction Co.">
+        <input type="hidden" name="from_name" value="Used Extraction Co. Website">
+        <input type="hidden" name="redirect" value="https://usedextraction1.netlify.app/thanks.html">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="two">
+          <div class="field"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
+          <div class="field"><label>Company</label><input type="text" name="company" placeholder="Company"></div>
+        </div>
+        <div class="two">
+          <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@company.com" required></div>
+          <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="(000) 000-0000"></div>
+        </div>
+        <div class="field"><label>Equipment of interest</label>
+          <select name="equipment" id="equipmentSelect">
+            <option>Wiped film / short path</option><option>Ethanol extraction</option><option>Hydrocarbon / closed-loop</option><option>Post-processing</option><option>Not sure — need guidance</option>
+          </select>
+        </div>
+        <div class="field"><label>Message</label><textarea name="message" rows="4" placeholder="What are you processing, and what's your target throughput? Mention any part numbers or specs you need."></textarea></div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center" type="submit">Send request</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="brand" style="display:flex;align-items:center;gap:11px;font-weight:800;font-size:17px"><span class="logo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v6l-3 4v10h18V12l-3-4V2"/><path d="M6 8h12"/></svg></span>Used Extraction Co.</div>
+        <p>Quality used extraction solutions — sourced, inspected, and shipped from Anaheim, California.</p>
+      </div>
+      <div><h4>Equipment</h4><ul><li><a href="#categories">Wiped Film</a></li><li><a href="#categories">Ethanol</a></li><li><a href="#categories">Hydrocarbon</a></li><li><a href="#categories">Post-Processing</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#inventory">Inventory</a></li><li><a href="#contact">Contact</a></li><li><a href="/admin/">Manage listings</a></li></ul></div>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Used Extraction Co. All rights reserved.</span><span>Anaheim, CA · (714) 555-0123</span></div>
+  </div>
+</footer>
+
+<script>
+  // Render inventory from listings.json (managed in /admin by Decap CMS)
+  (function(){
+    var grid = document.getElementById('listingGrid');
+    function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+    function card(it){
+      var status=(it.status||'Available');
+      var cls = status.toLowerCase()==='sold' ? 'badge sold' : (status.toLowerCase()==='pending' ? 'badge pending' : 'badge');
+      var img = it.image ? '<img src="'+esc(it.image)+'" alt="'+esc(it.name)+'">' :
+        '<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#5b6672" stroke-width="1.3"><path d="M6 2v6l-3 4v10h18V12l-3-4V2M6 8h12"/></svg>';
+      var price = it.price ? esc(it.price) : 'Inquire for price';
+      return '<div class="card"><div class="ph"><span class="'+cls+'">'+esc(status)+'</span>'+img+'</div>'+
+        '<div class="body"><h3>'+esc(it.name)+'</h3><p class="specs">'+esc(it.specs||'')+'</p>'+
+        '<div class="row"><div class="price">'+price+'</div>'+
+        '<button class="inq" data-name="'+esc(it.name)+'">Inquire →</button></div></div></div>';
+    }
+    fetch('listings.json?cb='+Date.now()).then(function(r){return r.json();}).then(function(data){
+      var items=(data && data.items) ? data.items : [];
+      var avail = items.filter(function(i){return (i.status||'').toLowerCase()!=='hidden';});
+      if(!avail.length){grid.innerHTML='<div class="empty">No listings yet — check back soon, or <a href="#contact" style="color:var(--accent);font-weight:600">tell us what you need</a>.</div>';return;}
+      grid.innerHTML = avail.map(card).join('');
+      // "Inquire" prefills the contact form + scrolls to it
+      Array.prototype.forEach.call(document.querySelectorAll('.inq'),function(b){
+        b.addEventListener('click',function(){
+          var sel=document.getElementById('equipmentSelect');
+          var msg=document.querySelector('textarea[name="message"]');
+          if(msg){msg.value='I’m interested in: '+b.getAttribute('data-name');}
+          document.getElementById('contact').scrollIntoView({behavior:'smooth'});
+        });
+      });
+    }).catch(function(){
+      grid.innerHTML='<div class="empty">Inventory is loading or temporarily unavailable. <a href="#contact" style="color:var(--accent);font-weight:600">Contact us</a> and we’ll help.</div>';
+    });
+  })();
+
+  // Netlify Identity: redirect to /admin after accepting an invite / logging in
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", function(user){
+      if(!user){ window.netlifyIdentity.on("login", function(){ document.location.href = "/admin/"; }); }
+    });
+  }
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Used Extraction Co. — Quality Used Extraction Equipment | Anaheim, CA</title>
+<meta name="description" content="Inspected and tested used extraction equipment — wiped film, ethanol, and hydrocarbon systems. Based in Anaheim, CA. Nationwide shipping.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Netlify Identity (for the /admin login + invite links) -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<style>
+  :root{
+    --ink:#10151b;--ink-soft:#5b6672;--line:#e7eaee;--bg:#fff;--bg-soft:#f5f7f9;
+    --accent:#1670b8;--accent-dk:#0f4f82;--accent-soft:#e8f1f9;
+    --radius:14px;--maxw:1180px;--shadow:0 1px 2px rgba(16,21,27,.04),0 8px 24px rgba(16,21,27,.06);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  a{text-decoration:none;color:inherit}
+  h1,h2,h3{letter-spacing:-.02em;line-height:1.13;color:var(--ink)}
+  section{padding:84px 0}
+  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:.15s}
+  .btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{background:var(--accent-dk)}
+  .btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}.btn-ghost:hover{border-color:var(--ink-soft)}
+  .head{max-width:640px;margin-bottom:42px}.head h2{font-size:36px;font-weight:800}.head p{color:var(--ink-soft);font-size:17px;margin-top:13px}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
+  .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:17px}
+  .logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent-dk));display:grid;place-items:center;color:#fff;flex:0 0 auto}
+  .navlinks{display:flex;gap:28px;align-items:center}.navlinks a{font-size:15px;font-weight:500;color:var(--ink-soft)}.navlinks a:hover{color:var(--ink)}
+  .nav-cta{display:flex;align-items:center;gap:16px}.phone{font-weight:600;font-size:15px}
+
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;padding:80px 0 64px}
+  .hero h1{font-size:52px;font-weight:800}.hero .sub{font-size:18.5px;color:var(--ink-soft);margin:22px 0 30px;max-width:30em}
+  .hero-cta{display:flex;gap:13px;flex-wrap:wrap}
+  .hero-stats{display:flex;gap:32px;margin-top:38px;padding-top:28px;border-top:1px solid var(--line)}
+  .stat .n{font-size:25px;font-weight:800}.stat .l{font-size:13px;color:var(--ink-soft)}
+  .hero-visual{aspect-ratio:4/3.3;border-radius:var(--radius);background:linear-gradient(150deg,#dde7ef,#c5d4e0 55%,#aebfce);box-shadow:var(--shadow);display:grid;place-items:center;position:relative}
+  .hero-visual .tag{position:absolute;left:16px;bottom:16px;background:#fff;border-radius:9px;padding:9px 13px;font-size:13px;font-weight:600;box-shadow:var(--shadow);display:flex;gap:8px;align-items:center}
+  .dot{width:8px;height:8px;border-radius:50%;background:#22a06b}
+
+  .trust{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}
+  .trust .wrap{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}.trust span{font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--ink-soft);text-transform:uppercase}
+
+  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .cat{border:1px solid var(--line);border-radius:var(--radius);padding:22px;background:#fff;transition:.15s}
+  .cat:hover{border-color:var(--accent);box-shadow:var(--shadow);transform:translateY(-2px)}
+  .cat .ic{width:44px;height:44px;border-radius:11px;background:var(--accent-soft);color:var(--accent-dk);display:grid;place-items:center;margin-bottom:14px}
+  .cat h3{font-size:16.5px;font-weight:700}.cat p{font-size:13.5px;color:var(--ink-soft);margin-top:5px}
+
+  .inv{background:var(--bg-soft)}
+  .inv-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;gap:18px;flex-wrap:wrap}
+  .inv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.15s;display:flex;flex-direction:column}
+  .card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+  .card .ph{aspect-ratio:4/3;position:relative;display:grid;place-items:center;background:linear-gradient(150deg,#e4ebf1,#cfdae4);overflow:hidden}
+  .card .ph img{width:100%;height:100%;object-fit:cover}
+  .badge{position:absolute;top:12px;left:12px;background:#fff;color:var(--ink);font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;box-shadow:var(--shadow)}
+  .badge.sold{background:var(--ink);color:#fff}.badge.pending{background:#b9770a;color:#fff}
+  .card .body{padding:19px;display:flex;flex-direction:column;flex:1}
+  .card h3{font-size:17px;font-weight:700}.card .specs{font-size:13.5px;color:var(--ink-soft);margin:8px 0 15px;flex:1}
+  .card .row{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:14px}
+  .price{font-size:17px;font-weight:800}.price small{font-size:12px;font-weight:600;color:var(--ink-soft)}
+  .inq{font-size:14px;font-weight:700;color:var(--accent);cursor:pointer;background:none;border:none;font-family:inherit}
+  .empty{grid-column:1/-1;text-align:center;padding:50px;color:var(--ink-soft);border:1px dashed var(--line);border-radius:var(--radius)}
+
+  .vp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+  .vp .ic{width:44px;height:44px;border-radius:11px;background:var(--accent-soft);color:var(--accent-dk);display:grid;place-items:center;margin-bottom:14px}
+  .vp h3{font-size:16px;font-weight:700}.vp p{font-size:14px;color:var(--ink-soft);margin-top:6px}
+
+  .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+  .form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
+  .field{margin-bottom:16px}.field label{display:block;font-size:13.5px;font-weight:600;margin-bottom:7px}
+  .field input,.field textarea,.field select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:9px;font-family:inherit;font-size:15px;color:var(--ink);background:#fff}
+  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .info-card{padding:26px;border-radius:var(--radius);background:var(--accent-soft);margin-bottom:18px}
+  .info-card h3{font-size:18px;font-weight:700;margin-bottom:14px}
+  .info-row{display:flex;gap:13px;align-items:flex-start;margin-bottom:14px}.info-row .ic{color:var(--accent-dk);flex:0 0 auto;margin-top:2px}
+  .info-row b{display:block;font-weight:700}.info-row span{color:var(--ink-soft);font-size:14px}
+
+  footer{background:var(--ink);color:#9fb0bf;padding:50px 0 28px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:38px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.14)}
+  footer .brand{color:#fff;margin-bottom:12px}footer p{font-size:14px;max-width:30em}
+  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px}
+  footer ul{list-style:none}footer ul li{margin-bottom:9px;font-size:14px}footer ul a:hover{color:#fff}
+  .foot-bottom{display:flex;justify-content:space-between;padding-top:20px;font-size:13px;flex-wrap:wrap;gap:8px}
+
+  @media(max-width:900px){
+    .hero{grid-template-columns:1fr;gap:34px}.hero h1{font-size:39px}
+    .cat-grid,.inv-grid,.vp-grid{grid-template-columns:1fr 1fr}.contact-grid,.foot-grid{grid-template-columns:1fr}
+    .navlinks,.phone{display:none}section{padding:58px 0}
+  }
+  @media(max-width:560px){.cat-grid,.inv-grid,.vp-grid,.two{grid-template-columns:1fr}.hero h1{font-size:32px}}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#"><span class="logo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v6l-3 4v10h18V12l-3-4V2"/><path d="M6 8h12"/></svg></span>Used Extraction Co.</a>
+    <nav class="navlinks">
+      <a href="#inventory">Inventory</a><a href="#categories">Equipment</a><a href="#why">Why Us</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-cta"><span class="phone">(714) 555-0123</span><a class="btn btn-primary" href="#contact">Request a Quote</a></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <span class="eyebrow">Anaheim, CA · Nationwide Shipping</span>
+      <h1>Premium used extraction equipment, inspected and ready to ship.</h1>
+      <p class="sub">Wiped film, ethanol, and hydrocarbon systems from trusted brands — fully tested, fairly priced, and backed by people who know the gear.</p>
+      <div class="hero-cta"><a class="btn btn-primary" href="#inventory">Browse Inventory →</a><a class="btn btn-ghost" href="#contact">Talk to a Specialist</a></div>
+      <div class="hero-stats"><div class="stat"><div class="n">200+</div><div class="l">Systems sold</div></div><div class="stat"><div class="n">48hr</div><div class="l">Quote turnaround</div></div><div class="stat"><div class="n">100%</div><div class="l">Inspected &amp; tested</div></div></div>
+    </div>
+    <div class="hero-visual">
+      <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#5b6672" stroke-width="1.2" opacity=".55"><path d="M6 2v6l-3 4v10h18V12l-3-4V2"/><path d="M6 8h12M9 2h6M7 17h10"/><circle cx="12" cy="14" r="2"/></svg>
+      <div class="tag"><span class="dot"></span> In stock now</div>
+    </div>
+  </div>
+</div>
+
+<!-- TRUST -->
+<div class="trust"><div class="wrap"><span>Wiped Film</span><span>Ethanol</span><span>Hydrocarbon</span><span>Post-Processing</span><span>Closed-Loop</span><span>Lab Equipment</span></div></div>
+
+<!-- CATEGORIES -->
+<section id="categories">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Shop by type</span><h2>Find the right system for your process</h2><p>Every category is sourced, inspected, and documented before it's listed.</p></div>
+    <div class="cat-grid">
+      <div class="cat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6v5l3 8a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4l3-8V3Z"/></svg></div><h3>Wiped Film</h3><p>Short-path &amp; molecular stills.</p></div>
+      <div class="cat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div><h3>Ethanol</h3><p>Centrifuges &amp; falling films.</p></div>
+      <div class="cat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg></div><h3>Hydrocarbon</h3><p>Closed-loop BHO &amp; PHO.</p></div>
+      <div class="cat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><h3>Post-Processing</h3><p>Filtration, ovens &amp; chillers.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INVENTORY (rendered from listings.json) -->
+<section class="inv" id="inventory">
+  <div class="wrap">
+    <div class="inv-top">
+      <div class="head" style="margin-bottom:0"><span class="eyebrow">Current inventory</span><h2>Available now</h2></div>
+      <a class="btn btn-ghost" href="#contact">Looking for something specific? →</a>
+    </div>
+    <div class="inv-grid" id="listingGrid">
+      <div class="empty">Loading inventory…</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="wrap">
+    <div class="head"><span class="eyebrow">Why buy from us</span><h2>Used equipment, without the guesswork</h2></div>
+    <div class="vp-grid">
+      <div class="vp"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><h3>Inspected &amp; tested</h3><p>Every unit checked and documented before listing.</p></div>
+      <div class="vp"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7M5.5 19a2 2 0 1 0 0-.01M18.5 19a2 2 0 1 0 0-.01"/></svg></div><h3>Nationwide shipping</h3><p>Crating, rigging, and freight handled for you.</p></div>
+      <div class="vp"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div><h3>Financing available</h3><p>Flexible options so you can scale capacity.</p></div>
+      <div class="vp"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div><h3>Buyer protection</h3><p>Clear documentation and warranty options.</p></div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT (Netlify Forms) -->
 <section id="contact">
   <div class="wrap">
