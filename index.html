@@ -3,270 +3,436 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Used Extraction Co. — Quality Used Extraction Equipment | Anaheim, CA</title>
-<meta name="description" content="Inspected and tested used extraction equipment — wiped film, ethanol, and hydrocarbon systems. Based in Anaheim, CA. Nationwide shipping.">
+<title>Used Extraction Co. — Used Extraction, Distillation &amp; Processing Equipment | Anaheim, CA</title>
+<meta name="description" content="Inspected, documented, freight-ready used extraction, distillation, solvent recovery, and post-processing equipment. Browse inventory and request a quote. Anaheim, CA.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<!-- Netlify Identity (for the /admin login + invite links) -->
-<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#10151b;--ink-soft:#5b6672;--line:#e7eaee;--bg:#fff;--bg-soft:#f5f7f9;
-    --accent:#1670b8;--accent-dk:#0f4f82;--accent-soft:#e8f1f9;
-    --radius:14px;--maxw:1180px;--shadow:0 1px 2px rgba(16,21,27,.04),0 8px 24px rgba(16,21,27,.06);
+    --bg:#0c0f13; --surface:#161b22; --surface-2:#1b212b; --border:#2a323d; --border-soft:#222a34;
+    --text:#eaeef3; --text-soft:#97a3b0; --text-dim:#6c7884;
+    --accent:#e8a431; --accent-dk:#cf8f1e; --accent-soft:rgba(232,164,49,.12);
+    --green:#43b96e; --green-soft:rgba(67,185,110,.14);
+    --amber:#e8a431; --amber-soft:rgba(232,164,49,.14);
+    --grey:#737f8b; --grey-soft:rgba(115,127,139,.16);
+    --radius:12px; --maxw:1200px;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 12px 30px rgba(0,0,0,.35);
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
   a{text-decoration:none;color:inherit}
-  h1,h2,h3{letter-spacing:-.02em;line-height:1.13;color:var(--ink)}
-  section{padding:84px 0}
-  .eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;padding:13px 22px;border-radius:10px;cursor:pointer;border:1px solid transparent;transition:.15s}
-  .btn-primary{background:var(--accent);color:#fff}.btn-primary:hover{background:var(--accent-dk)}
-  .btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}.btn-ghost:hover{border-color:var(--ink-soft)}
-  .head{max-width:640px;margin-bottom:42px}.head h2{font-size:36px;font-weight:800}.head p{color:var(--ink-soft);font-size:17px;margin-top:13px}
+  h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-.01em;line-height:1.15;color:var(--text)}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 26px}
+  .eyebrow{font-size:12px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--accent)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:14.5px;padding:12px 20px;border-radius:9px;cursor:pointer;border:1px solid transparent;transition:.15s;font-family:'Inter',sans-serif}
+  .btn-primary{background:var(--accent);color:#1a1206;border-color:var(--accent)}
+  .btn-primary:hover{background:var(--accent-dk)}
+  .btn-outline{background:transparent;color:var(--text);border:1px solid var(--border)}
+  .btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+  .btn-sm{padding:9px 15px;font-size:13.5px}
 
-  header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.86);backdrop-filter:saturate(180%) blur(12px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
-  .brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:17px}
-  .logo{width:34px;height:34px;border-radius:9px;background:linear-gradient(135deg,var(--accent),var(--accent-dk));display:grid;place-items:center;color:#fff;flex:0 0 auto}
-  .navlinks{display:flex;gap:28px;align-items:center}.navlinks a{font-size:15px;font-weight:500;color:var(--ink-soft)}.navlinks a:hover{color:var(--ink)}
-  .nav-cta{display:flex;align-items:center;gap:16px}.phone{font-weight:600;font-size:15px}
+  .badge{display:inline-flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
+  .badge .dot{width:7px;height:7px;border-radius:50%}
+  .b-available{background:var(--green-soft);color:#6fd897}.b-available .dot{background:var(--green)}
+  .b-pending{background:var(--amber-soft);color:var(--amber)}.b-pending .dot{background:var(--amber)}
+  .b-sold{background:var(--grey-soft);color:#9aa6b2}.b-sold .dot{background:var(--grey)}
 
-  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:54px;align-items:center;padding:80px 0 64px}
-  .hero h1{font-size:52px;font-weight:800}.hero .sub{font-size:18.5px;color:var(--ink-soft);margin:22px 0 30px;max-width:30em}
+  header{position:sticky;top:0;z-index:50;background:rgba(12,15,19,.85);backdrop-filter:saturate(160%) blur(12px);border-bottom:1px solid var(--border-soft)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+  .brand{display:flex;align-items:center;gap:11px}
+  .brand .mark{width:34px;height:34px;border-radius:8px;background:linear-gradient(140deg,var(--accent),var(--accent-dk));display:grid;place-items:center;color:#1a1206;flex:0 0 auto}
+  .brand .word{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:18px;letter-spacing:.01em}
+  .brand .word b{color:var(--accent);font-weight:700}
+  .navlinks{display:flex;gap:26px;align-items:center}
+  .navlinks a{font-size:14.5px;font-weight:500;color:var(--text-soft);cursor:pointer}
+  .navlinks a:hover,.navlinks a.active{color:var(--text)}
+  .nav-cta{display:flex;align-items:center;gap:16px}
+  .nav-phone{font-size:14px;font-weight:600;color:var(--text-soft)}
+
+  section{padding:72px 0}
+  .head{max-width:640px;margin-bottom:36px}
+  .head h2{font-size:32px;font-weight:700}
+  .head p{color:var(--text-soft);font-size:16px;margin-top:11px}
+
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center;padding:74px 0 60px}
+  .hero h1{font-size:50px;font-weight:700;letter-spacing:-.02em}
+  .hero .sub{font-size:18px;color:var(--text-soft);margin:20px 0 28px;max-width:30em}
   .hero-cta{display:flex;gap:13px;flex-wrap:wrap}
-  .hero-stats{display:flex;gap:32px;margin-top:38px;padding-top:28px;border-top:1px solid var(--line)}
-  .stat .n{font-size:25px;font-weight:800}.stat .l{font-size:13px;color:var(--ink-soft)}
-  .hero-visual{aspect-ratio:4/3.3;border-radius:var(--radius);background:linear-gradient(150deg,#dde7ef,#c5d4e0 55%,#aebfce);box-shadow:var(--shadow);display:grid;place-items:center;position:relative;overflow:hidden}
-  .hero-visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-  .hero-visual .tag{position:absolute;left:16px;bottom:16px;background:#fff;border-radius:9px;padding:9px 13px;font-size:13px;font-weight:600;box-shadow:var(--shadow);display:flex;gap:8px;align-items:center}
-  .dot{width:8px;height:8px;border-radius:50%;background:#22a06b}
+  .hero-stats{display:flex;gap:30px;margin-top:38px;padding-top:26px;border-top:1px solid var(--border-soft)}
+  .hero-stats .n{font-family:'Space Grotesk',sans-serif;font-size:23px;font-weight:700;color:var(--accent)}
+  .hero-stats .l{font-size:12.5px;color:var(--text-soft)}
+  .hero-visual{aspect-ratio:4/3.2;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);box-shadow:var(--shadow);position:relative;cursor:pointer}
+  .hero-visual .ovl{position:absolute;left:14px;bottom:14px;z-index:2;background:rgba(12,15,19,.85);backdrop-filter:blur(6px);border:1px solid var(--border);border-radius:9px;padding:8px 13px;font-size:13px;font-weight:600;display:flex;gap:8px;align-items:center}
 
-  .trust{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}
-  .trust .wrap{display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap}.trust span{font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--ink-soft);text-transform:uppercase}
+  .ph{background:radial-gradient(120% 90% at 30% 20%, #2a323d 0%, #1a2029 55%, #11161c 100%);display:grid;place-items:center;color:#3c4654}
+  .ph svg{opacity:.6}
+  .ph .lbl{position:absolute;top:10px;right:12px;font-size:10.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#55616f}
 
-  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-  .cat{border:1px solid var(--line);border-radius:var(--radius);padding:22px;background:#fff;transition:.15s}
-  .cat:hover{border-color:var(--accent);box-shadow:var(--shadow);transform:translateY(-2px)}
-  .cat .ic{width:44px;height:44px;border-radius:11px;background:var(--accent-soft);color:var(--accent-dk);display:grid;place-items:center;margin-bottom:14px}
-  .cat h3{font-size:16.5px;font-weight:700}.cat p{font-size:13.5px;color:var(--ink-soft);margin-top:5px}
+  .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .cat{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px;cursor:pointer;transition:.15s}
+  .cat:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .cat .ic{width:42px;height:42px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:14px}
+  .cat h3{font-size:16px;font-weight:600}
+  .cat p{font-size:13px;color:var(--text-soft);margin-top:4px}
+  .cat .sub{font-size:12px;color:var(--text-dim);margin-top:8px}
 
-  .inv{background:var(--bg-soft)}
-  .inv-top{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;gap:18px;flex-wrap:wrap}
-  .inv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;transition:.15s;display:flex;flex-direction:column}
-  .card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
-  .card .ph{aspect-ratio:4/3;position:relative;display:grid;place-items:center;background:linear-gradient(150deg,#e4ebf1,#cfdae4);overflow:hidden}
-  .card .ph img{width:100%;height:100%;object-fit:cover}
-  .badge{position:absolute;top:12px;left:12px;background:#fff;color:var(--ink);font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;box-shadow:var(--shadow)}
-  .badge.sold{background:var(--ink);color:#fff}.badge.pending{background:#b9770a;color:#fff}
-  .card .body{padding:19px;display:flex;flex-direction:column;flex:1}
-  .card h3{font-size:17px;font-weight:700}.card .specs{font-size:13.5px;color:var(--ink-soft);margin:8px 0 15px;flex:1}
-  .card .row{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--line);padding-top:14px}
-  .price{font-size:17px;font-weight:800}.price small{font-size:12px;font-weight:600;color:var(--ink-soft)}
-  .inq{font-size:14px;font-weight:700;color:var(--accent);cursor:pointer;background:none;border:none;font-family:inherit}
-  .empty{grid-column:1/-1;text-align:center;padding:50px;color:var(--ink-soft);border:1px dashed var(--line);border-radius:var(--radius)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .card{display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:.15s;cursor:pointer}
+  .card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow)}
+  .card .ph{aspect-ratio:4/3;position:relative}
+  .card .st{position:absolute;top:11px;left:11px;z-index:2}
+  .card .body{padding:17px;display:flex;flex-direction:column;flex:1}
+  .card .cat-tag{font-size:11.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--accent)}
+  .card h3{font-size:16.5px;font-weight:600;margin:5px 0 0}
+  .card .meta{font-size:13px;color:var(--text-soft);margin-top:6px;display:flex;flex-wrap:wrap;gap:4px 12px}
+  .card .specs{list-style:none;margin:13px 0;padding:13px 0;border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft);display:flex;flex-direction:column;gap:5px;flex:1}
+  .card .specs li{font-size:12.5px;color:var(--text-soft);padding-left:15px;position:relative}
+  .card .specs li::before{content:'';position:absolute;left:0;top:8px;width:5px;height:5px;border-radius:50%;background:var(--accent)}
+  .card .row{display:flex;justify-content:space-between;align-items:center;margin-top:auto}
+  .card .price{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700}
+  .card .price.quote{font-size:14px;color:var(--text-soft);font-weight:600}
 
-  .vp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
-  .vp .ic{width:44px;height:44px;border-radius:11px;background:var(--accent-soft);color:var(--accent-dk);display:grid;place-items:center;margin-bottom:14px}
-  .vp h3{font-size:16px;font-weight:700}.vp p{font-size:14px;color:var(--ink-soft);margin-top:6px}
+  .filterbar{display:flex;flex-direction:column;gap:14px;margin-bottom:28px}
+  .chips{display:flex;flex-wrap:wrap;gap:9px}
+  .chip{font-size:13.5px;font-weight:600;padding:8px 15px;border-radius:999px;border:1px solid var(--border);color:var(--text-soft);cursor:pointer;background:transparent;transition:.12s;font-family:'Inter',sans-serif}
+  .chip:hover{border-color:var(--accent);color:var(--text)}
+  .chip.active{background:var(--accent);color:#1a1206;border-color:var(--accent)}
+  .subchips{display:flex;gap:8px;padding-left:2px}
+  .subchip{font-size:12.5px;font-weight:600;padding:6px 12px;border-radius:999px;border:1px solid var(--border-soft);color:var(--text-dim);cursor:pointer;background:transparent}
+  .subchip.active{color:var(--accent);border-color:var(--accent)}
+  .searchwrap{position:relative;max-width:420px}
+  .searchwrap input{width:100%;padding:12px 14px 12px 40px;background:var(--surface);border:1px solid var(--border);border-radius:9px;color:var(--text);font-family:inherit;font-size:14.5px}
+  .searchwrap input:focus{outline:none;border-color:var(--accent)}
+  .searchwrap svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--text-dim)}
+  .resultcount{font-size:13px;color:var(--text-dim)}
 
-  .contact-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
-  .form{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
-  .field{margin-bottom:16px}.field label{display:block;font-size:13.5px;font-weight:600;margin-bottom:7px}
-  .field input,.field textarea,.field select{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:9px;font-family:inherit;font-size:15px;color:var(--ink);background:#fff}
-  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px var(--accent-soft)}
-  .two{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .info-card{padding:26px;border-radius:var(--radius);background:var(--accent-soft);margin-bottom:18px}
-  .info-card h3{font-size:18px;font-weight:700;margin-bottom:14px}
-  .info-row{display:flex;gap:13px;align-items:flex-start;margin-bottom:14px}.info-row .ic{color:var(--accent-dk);flex:0 0 auto;margin-top:2px}
-  .info-row b{display:block;font-weight:700}.info-row span{color:var(--ink-soft);font-size:14px}
+  .crumb{font-size:13px;color:var(--text-soft);margin-bottom:22px;display:flex;gap:7px;flex-wrap:wrap}
+  .crumb a:hover{color:var(--accent)}.crumb span{color:var(--text-dim)}
 
-  footer{background:var(--ink);color:#9fb0bf;padding:50px 0 28px}
-  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:38px;padding-bottom:30px;border-bottom:1px solid rgba(255,255,255,.14)}
-  footer .brand{color:#fff;margin-bottom:12px}footer p{font-size:14px;max-width:30em}
-  footer h4{color:#fff;font-size:14px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:14px}
-  footer ul{list-style:none}footer ul li{margin-bottom:9px;font-size:14px}footer ul a:hover{color:#fff}
-  .foot-bottom{display:flex;justify-content:space-between;padding-top:20px;font-size:13px;flex-wrap:wrap;gap:8px}
+  .detail{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:start}
+  .gallery .main{aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);position:relative}
+  .gallery .thumbs{display:flex;gap:9px;margin-top:11px;flex-wrap:wrap}
+  .gallery .thumbs .t{width:74px;height:58px;border-radius:7px;overflow:hidden;border:1px solid var(--border);position:relative;cursor:pointer;opacity:.65;transition:.12s}
+  .gallery .thumbs .t.active,.gallery .thumbs .t:hover{opacity:1;border-color:var(--accent)}
+  .dt-head h1{font-size:30px;font-weight:700}
+  .dt-sub{font-size:14px;color:var(--accent);font-weight:600;margin-top:4px}
+  .dt-price{font-family:'Space Grotesk',sans-serif;font-size:27px;font-weight:700;margin:18px 0 4px}
+  .dt-price.quote{font-size:19px;color:var(--text-soft)}
+  .dt-meta{display:flex;flex-direction:column;gap:9px;margin:18px 0;padding:16px 0;border-top:1px solid var(--border-soft);border-bottom:1px solid var(--border-soft)}
+  .dt-meta .r{display:flex;justify-content:space-between;font-size:14px}
+  .dt-meta .r span{color:var(--text-soft)}.dt-meta .r b{font-weight:600}
+  .dt-cta{display:flex;flex-direction:column;gap:10px;margin-top:18px}
+  .dt-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+  .dt-tags .tg{font-size:12px;font-weight:500;color:var(--text-soft);background:var(--surface-2);border:1px solid var(--border-soft);padding:4px 10px;border-radius:6px}
+
+  .dt-sections{margin-top:54px;display:grid;grid-template-columns:1fr;gap:34px;max-width:820px}
+  .dt-sec h3{font-size:19px;font-weight:600;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border-soft)}
+  .dt-sec p{color:var(--text-soft);font-size:15px;white-space:pre-line}
+  .dt-sec ul.check{list-style:none;display:flex;flex-direction:column;gap:8px}
+  .dt-sec ul.check li{font-size:14.5px;color:var(--text-soft);padding-left:25px;position:relative}
+  .dt-sec ul.check li::before{content:'';position:absolute;left:0;top:3px;width:16px;height:16px;border-radius:4px;background:var(--accent-soft);border:1px solid var(--accent)}
+  .dt-sec ul.check li::after{content:'';position:absolute;left:5px;top:7px;width:5px;height:8px;border:solid var(--accent);border-width:0 2px 2px 0;transform:rotate(45deg)}
+  .spectable{width:100%;border-collapse:collapse;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+  .spectable tr{border-bottom:1px solid var(--border-soft)}.spectable tr:last-child{border-bottom:none}
+  .spectable td{padding:11px 16px;font-size:14px}
+  .spectable td:first-child{color:var(--text-soft);width:42%;background:var(--surface)}
+  .spectable td:last-child{font-weight:500}
+
+  .vp-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+  .vp .ic{width:42px;height:42px;border-radius:10px;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;margin-bottom:13px}
+  .vp h3{font-size:15.5px;font-weight:600}.vp p{font-size:13.5px;color:var(--text-soft);margin-top:6px}
+
+  .band{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:38px 40px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+  .band h2{font-size:26px}.band p{color:var(--text-soft);margin-top:8px;max-width:34em;font-size:15px}
+
+  .contact-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:start}
+  .form{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px}
+  .field{margin-bottom:15px}.field label{display:block;font-size:13px;font-weight:600;margin-bottom:6px}
+  .field input,.field textarea,.field select{width:100%;padding:11px 13px;background:var(--bg);border:1px solid var(--border);border-radius:8px;color:var(--text);font-family:inherit;font-size:14.5px}
+  .field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--accent)}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+  .info-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:24px;margin-bottom:16px}
+  .info-row{display:flex;gap:12px;align-items:flex-start;margin-bottom:14px;font-size:14px}
+  .info-row .ic{color:var(--accent);flex:0 0 auto;margin-top:2px}.info-row b{display:block}.info-row span{color:var(--text-soft);font-size:13px}
+  .prefill-note{background:var(--accent-soft);border:1px solid rgba(232,164,49,.3);border-radius:8px;padding:11px 14px;font-size:13.5px;color:var(--accent);margin-bottom:16px}
+
+  .related{margin-top:56px}.related h3{font-size:19px;margin-bottom:18px}
+
+  footer{border-top:1px solid var(--border-soft);padding:46px 0 30px;margin-top:40px}
+  .foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:38px;padding-bottom:28px;border-bottom:1px solid var(--border-soft)}
+  footer p{font-size:13.5px;color:var(--text-soft);max-width:28em}
+  footer h4{font-size:12.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--text-dim);margin-bottom:13px}
+  footer ul{list-style:none}footer ul li{margin-bottom:9px;font-size:14px;color:var(--text-soft);cursor:pointer}footer ul li:hover{color:var(--accent)}
+  .foot-bottom{padding-top:20px;display:flex;justify-content:space-between;font-size:12.5px;color:var(--text-dim);flex-wrap:wrap;gap:8px}
 
   @media(max-width:900px){
-    .hero{grid-template-columns:1fr;gap:34px}.hero h1{font-size:39px}
-    .cat-grid,.inv-grid,.vp-grid{grid-template-columns:1fr 1fr}.contact-grid,.foot-grid{grid-template-columns:1fr}
-    .navlinks,.phone{display:none}section{padding:58px 0}
+    .hero{grid-template-columns:1fr;gap:32px}.hero h1{font-size:38px}
+    .cat-grid,.grid,.vp-grid{grid-template-columns:1fr 1fr}
+    .detail,.contact-grid,.foot-grid{grid-template-columns:1fr}
+    .navlinks,.nav-phone{display:none}section{padding:52px 0}
   }
-  @media(max-width:560px){.cat-grid,.inv-grid,.vp-grid,.two{grid-template-columns:1fr}.hero h1{font-size:32px}}
+  @media(max-width:560px){.cat-grid,.grid,.vp-grid,.two{grid-template-columns:1fr}.hero h1{font-size:31px}}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <header>
   <div class="wrap nav">
-    <a class="brand" href="#"><span class="logo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v6l-3 4v10h18V12l-3-4V2"/><path d="M6 8h12"/></svg></span>Used Extraction Co.</a>
+    <a class="brand" href="#/"><span class="mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v6l-3 4v10h18V12l-3-4V2"/><path d="M6 8h12"/></svg></span><span class="word">USED<b>EXTRACTION</b></span></a>
     <nav class="navlinks">
-      <a href="#inventory">Inventory</a><a href="#categories">Equipment</a><a href="#why">Why Us</a><a href="#contact">Contact</a>
+      <a href="#/equipment" data-nav="equipment">Equipment</a>
+      <a href="#/consulting" data-nav="consulting">Consulting</a>
+      <a href="#/why" data-nav="why">Why Us</a>
+      <a href="#/contact" data-nav="contact">Contact</a>
+      <a href="#/sell" data-nav="sell">Sell</a>
     </nav>
-    <div class="nav-cta"><span class="phone">(714) 555-0123</span><a class="btn btn-primary" href="#contact">Request a Quote</a></div>
+    <div class="nav-cta"><span class="nav-phone">(714) 555-0123</span><a class="btn btn-primary btn-sm" href="#/contact">Request a Quote</a></div>
   </div>
 </header>
 
-<!-- HERO -->
-<div class="wrap">
-  <div class="hero">
-    <div>
-      <span class="eyebrow">Anaheim, CA · Nationwide Shipping</span>
-      <h1>Premium used extraction equipment, inspected and ready to ship.</h1>
-      <p class="sub">Wiped film, ethanol, and hydrocarbon systems from trusted brands — fully tested, fairly priced, and backed by people who know the gear.</p>
-      <div class="hero-cta"><a class="btn btn-primary" href="#inventory">Browse Inventory →</a><a class="btn btn-ghost" href="#contact">Talk to a Specialist</a></div>
-      <div class="hero-stats"><div class="stat"><div class="n">200+</div><div class="l">Systems sold</div></div><div class="stat"><div class="n">48hr</div><div class="l">Quote turnaround</div></div><div class="stat"><div class="n">100%</div><div class="l">Inspected &amp; tested</div></div></div>
-    </div>
-    <div class="hero-visual" id="heroVisual">
-      <svg width="120" height="120" viewBox="0 0 24 24" fill="none" stroke="#5b6672" stroke-width="1.2" opacity=".55"><path d="M6 2v6l-3 4v10h18V12l-3-4V2"/><path d="M6 8h12M9 2h6M7 17h10"/><circle cx="12" cy="14" r="2"/></svg>
-      <div class="tag"><span class="dot"></span> In stock now</div>
-    </div>
-  </div>
-</div>
+<main id="app"><div class="wrap"><section><p style="color:var(--text-soft)">Loading inventory…</p></section></div></main>
 
-<!-- TRUST -->
-<div class="trust"><div class="wrap"><span>Wiped Film</span><span>Ethanol</span><span>Hydrocarbon</span><span>Post-Processing</span><span>Closed-Loop</span><span>Lab Equipment</span></div></div>
-
-<!-- CATEGORIES -->
-<section id="categories">
-  <div class="wrap">
-    <div class="head"><span class="eyebrow">Shop by type</span><h2>Find the right system for your process</h2><p>Every category is sourced, inspected, and documented before it's listed.</p></div>
-    <div class="cat-grid">
-      <div class="cat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 3h6v5l3 8a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4l3-8V3Z"/></svg></div><h3>Wiped Film</h3><p>Short-path &amp; molecular stills.</p></div>
-      <div class="cat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div><h3>Ethanol</h3><p>Centrifuges &amp; falling films.</p></div>
-      <div class="cat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/></svg></div><h3>Hydrocarbon</h3><p>Closed-loop BHO &amp; PHO.</p></div>
-      <div class="cat"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h4l3 8 4-16 3 8h4"/></svg></div><h3>Post-Processing</h3><p>Filtration, ovens &amp; chillers.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- INVENTORY (rendered from listings.json) -->
-<section class="inv" id="inventory">
-  <div class="wrap">
-    <div class="inv-top">
-      <div class="head" style="margin-bottom:0"><span class="eyebrow">Current inventory</span><h2>Available now</h2></div>
-      <a class="btn btn-ghost" href="#contact">Looking for something specific? →</a>
-    </div>
-    <div class="inv-grid" id="listingGrid">
-      <div class="empty">Loading inventory…</div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY US -->
-<section id="why">
-  <div class="wrap">
-    <div class="head"><span class="eyebrow">Why buy from us</span><h2>Used equipment, without the guesswork</h2></div>
-    <div class="vp-grid">
-      <div class="vp"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg></div><h3>Inspected &amp; tested</h3><p>Every unit checked and documented before listing.</p></div>
-      <div class="vp"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7M5.5 19a2 2 0 1 0 0-.01M18.5 19a2 2 0 1 0 0-.01"/></svg></div><h3>Nationwide shipping</h3><p>Crating, rigging, and freight handled for you.</p></div>
-      <div class="vp"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></div><h3>Financing available</h3><p>Flexible options so you can scale capacity.</p></div>
-      <div class="vp"><div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg></div><h3>Buyer protection</h3><p>Clear documentation and warranty options.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT (Web3Forms) -->
-<section id="contact">
-  <div class="wrap">
-    <div class="contact-grid">
-      <div>
-        <div class="head" style="margin-bottom:22px"><span class="eyebrow">Get in touch</span><h2>Request a quote</h2><p>Tell us what you're looking for and we'll get back to you within one business day.</p></div>
-        <div class="info-card">
-          <h3>Talk to a specialist</h3>
-          <div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.07 4.18 2 2 0 0 1 5.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span><div><b>(714) 555-0123</b><span>Mon–Fri, 8am–5pm PT</span></div></div>
-          <div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><div><b>sales@usedextraction.com</b><span>We reply within 24 hours</span></div></div>
-          <div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Anaheim, California</b><span>Warehouse visits by appointment</span></div></div>
-        </div>
-      </div>
-
-      <!-- Web3Forms — free form-to-email. Submissions are emailed to sales@usedextraction.com. -->
-      <form action="https://api.web3forms.com/submit" method="POST" class="form">
-        <input type="hidden" name="access_key" value="c2f72d91-e1c0-4787-bb4e-e5425dd65dc6">
-        <input type="hidden" name="subject" value="New quote request — Used Extraction Co.">
-        <input type="hidden" name="from_name" value="Used Extraction Co. Website">
-        <input type="hidden" name="redirect" value="https://usedextraction1.netlify.app/thanks.html">
-        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-        <div class="two">
-          <div class="field"><label>Name</label><input type="text" name="name" placeholder="Your name" required></div>
-          <div class="field"><label>Company</label><input type="text" name="company" placeholder="Company"></div>
-        </div>
-        <div class="two">
-          <div class="field"><label>Email</label><input type="email" name="email" placeholder="you@company.com" required></div>
-          <div class="field"><label>Phone</label><input type="tel" name="phone" placeholder="(000) 000-0000"></div>
-        </div>
-        <div class="field"><label>Equipment of interest</label>
-          <select name="equipment" id="equipmentSelect">
-            <option>Wiped film / short path</option><option>Ethanol extraction</option><option>Hydrocarbon / closed-loop</option><option>Post-processing</option><option>Not sure — need guidance</option>
-          </select>
-        </div>
-        <div class="field"><label>Message</label><textarea name="message" rows="4" placeholder="What are you processing, and what's your target throughput? Mention any part numbers or specs you need."></textarea></div>
-        <button class="btn btn-primary" style="width:100%;justify-content:center" type="submit">Send request</button>
-      </form>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <div class="brand" style="display:flex;align-items:center;gap:11px;font-weight:800;font-size:17px"><span class="logo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v6l-3 4v10h18V12l-3-4V2"/><path d="M6 8h12"/></svg></span>Used Extraction Co.</div>
-        <p>Quality used extraction solutions — sourced, inspected, and shipped from Anaheim, California.</p>
+        <a class="brand" href="#/"><span class="mark"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v6l-3 4v10h18V12l-3-4V2"/><path d="M6 8h12"/></svg></span><span class="word">USED<b>EXTRACTION</b></span></a>
+        <p style="margin-top:12px">Inspected, documented, and freight-ready used extraction, distillation, and processing equipment. Anaheim, California.</p>
       </div>
-      <div><h4>Equipment</h4><ul><li><a href="#categories">Wiped Film</a></li><li><a href="#categories">Ethanol</a></li><li><a href="#categories">Hydrocarbon</a></li><li><a href="#categories">Post-Processing</a></li></ul></div>
-      <div><h4>Company</h4><ul><li><a href="#inventory">Inventory</a></li><li><a href="#contact">Contact</a></li><li><a href="/admin/">Manage listings</a></li></ul></div>
+      <div><h4>Equipment</h4><ul><li onclick="goCat('Extraction')">Extraction</li><li onclick="goCat('Distillation')">Distillation</li><li onclick="goCat('Solvent Recovery')">Solvent Recovery</li><li onclick="goCat('Post Processing')">Post Processing</li></ul></div>
+      <div><h4>Company</h4><ul><li onclick="location.hash='#/consulting'">Consulting</li><li onclick="location.hash='#/sell'">Sell Your Equipment</li><li onclick="location.hash='#/contact'">Contact</li><li onclick="location.href='/admin/'">Manage Listings</li></ul></div>
     </div>
     <div class="foot-bottom"><span>© 2026 Used Extraction Co. All rights reserved.</span><span>Anaheim, CA · (714) 555-0123</span></div>
   </div>
 </footer>
 
 <script>
-  (function(){
-    var grid = document.getElementById('listingGrid');
-    function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
-    function card(it){
-      var status=(it.status||'Available');
-      var cls = status.toLowerCase()==='sold' ? 'badge sold' : (status.toLowerCase()==='pending' ? 'badge pending' : 'badge');
-      var img = it.image ? '<img src="'+esc(it.image)+'" alt="'+esc(it.name)+'">' :
-        '<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#5b6672" stroke-width="1.3"><path d="M6 2v6l-3 4v10h18V12l-3-4V2M6 8h12"/></svg>';
-      var price = it.price ? esc(it.price) : 'Inquire for price';
-      return '<div class="card"><div class="ph"><span class="'+cls+'">'+esc(status)+'</span>'+img+'</div>'+
-        '<div class="body"><h3>'+esc(it.name)+'</h3><p class="specs">'+esc(it.specs||'')+'</p>'+
-        '<div class="row"><div class="price">'+price+'</div>'+
-        '<button class="inq" data-name="'+esc(it.name)+'">Inquire →</button></div></div></div>';
-    }
-    fetch('listings.json?cb='+Date.now()).then(function(r){return r.json();}).then(function(data){
-      var items=(data && data.items) ? data.items : [];
-      var feat = items.find(function(i){return i.featured && i.image;});
-      if(feat){ var hv=document.getElementById('heroVisual'); if(hv){ hv.innerHTML='<img src="'+esc(feat.image)+'" alt="'+esc(feat.name)+'"><div class="tag"><span class="dot"></span> '+esc(feat.name)+'</div>'; } }
-      var avail = items.filter(function(i){return (i.status||'').toLowerCase()!=='hidden';});
-      if(!avail.length){grid.innerHTML='<div class="empty">No listings yet.</div>';return;}
-      grid.innerHTML = avail.map(card).join('');
-      Array.prototype.forEach.call(document.querySelectorAll('.inq'),function(b){
-        b.addEventListener('click',function(){
-          var msg=document.querySelector('textarea[name="message"]');
-          if(msg){msg.value='I’m interested in: '+b.getAttribute('data-name');}
-          document.getElementById('contact').scrollIntoView({behavior:'smooth'});
-        });
-      });
-    }).catch(function(){
-      grid.innerHTML='<div class="empty">Inventory is loading or temporarily unavailable.</div>';
-    });
-  })();
+var CATS=["Extraction","Distillation","Solvent Recovery","Post Processing"];
+var SUBCATS={"Extraction":["Ethanol","Hydrocarbon"]};
+var LISTINGS=[]; var LOADED=false;
 
-  if (window.netlifyIdentity) {
-    window.netlifyIdentity.on("init", function(user){
-      if(!user){ window.netlifyIdentity.on("login", function(){ document.location.href = "/admin/"; }); }
-    });
-  }
+var WEB3KEY="c2f72d91-e1c0-4787-bb4e-e5425dd65dc6";
+var THANKS="https://usedextraction1.netlify.app/thanks.html";
+
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+function bySlug(s){for(var i=0;i<LISTINGS.length;i++){if(LISTINGS[i].slug===s)return LISTINGS[i];}return null;}
+function arr(v){return Array.isArray(v)?v:(v?[v]:[]);}
+function hasPrice(l){return l.price && l.price.toLowerCase().indexOf('request')<0 && l.price.toLowerCase().indexOf('quote')<0;}
+function statusBadge(st){var k=(st||'Available').toLowerCase();var cls=k==='sold'?'b-sold':(k==='pending'?'b-pending':'b-available');return '<span class="badge '+cls+'"><span class="dot"></span>'+esc(st||'Available')+'</span>';}
+function machIcon(sz){return '<svg width="'+sz+'" height="'+sz+'" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 2v6l-3 4v10h18V12l-3-4V2M6 8h12"/><circle cx="12" cy="14" r="2"/></svg>';}
+function slot(src,big,label){
+  return '<div class="ph" style="position:absolute;inset:0">'+machIcon(big?64:40)+(label?'<span class="lbl">'+esc(label)+'</span>':'')+'</div>'+
+    (src?'<img src="'+esc(src)+'" alt="" loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:1" onerror="this.remove()">':'');
+}
+function go(h){location.hash=h;}
+function goCat(c){location.hash='#/equipment?cat='+encodeURIComponent(c);}
+
+function cardHTML(l){
+  var specs=arr(l.specs).slice(0,3).map(function(s){return '<li>'+esc(s.label)+': '+esc(s.value)+'</li>';}).join('');
+  var price=hasPrice(l)?'<span class="price">'+esc(l.price)+'</span>':'<span class="price quote">Request Quote</span>';
+  return '<a class="card" href="#/equipment/'+esc(l.slug)+'">'+
+    '<div class="ph">'+slot(arr(l.images)[0])+'<span class="st">'+statusBadge(l.status)+'</span></div>'+
+    '<div class="body"><span class="cat-tag">'+esc(l.category)+(l.subcategory?' · '+esc(l.subcategory):'')+'</span>'+
+    '<h3>'+esc(l.title)+'</h3>'+
+    '<div class="meta">'+(l.condition?'<span>'+esc(l.condition)+'</span>':'')+(l.location?'<span>'+esc(l.location)+'</span>':'')+'</div>'+
+    '<ul class="specs">'+specs+'</ul>'+
+    '<div class="row">'+price+'<span class="btn btn-outline btn-sm">View Details →</span></div>'+
+    '</div></a>';
+}
+
+function viewHome(){
+  var feat=LISTINGS.filter(function(l){return l.featured;})[0]||LISTINGS[0];
+  var top3=LISTINGS.filter(function(l){return (l.status||'').toLowerCase()!=='sold';}).slice(0,3);
+  var catMeta={"Extraction":"Ethanol & hydrocarbon systems","Distillation":"Wiped film & short path","Solvent Recovery":"Falling films & rotovaps","Post Processing":"Ovens, filtration & more"};
+  var catIcons={"Extraction":'<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/',"Distillation":'<path d="M9 3h6v5l3 8a4 4 0 0 1-4 4H10a4 4 0 0 1-4-4l3-8V3Z"/',"Solvent Recovery":'<circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/',"Post Processing":'<path d="M3 12h4l3 8 4-16 3 8h4"/'};
+  return ''+
+  '<div class="wrap"><div class="hero">'+
+    '<div>'+
+      '<span class="eyebrow">Anaheim, CA · Nationwide Freight</span>'+
+      '<h1>Used extraction equipment, inspected and ready to ship.</h1>'+
+      '<p class="sub">Extraction, distillation, solvent recovery, and post-processing gear from trusted brands — tested, documented, and fairly priced.</p>'+
+      '<div class="hero-cta"><a class="btn btn-primary" href="#/equipment">Browse Inventory</a><a class="btn btn-outline" href="#/sell">Sell Equipment</a></div>'+
+      '<div class="hero-stats"><div><div class="n">200+</div><div class="l">Systems sold</div></div><div><div class="n">48hr</div><div class="l">Quote turnaround</div></div><div><div class="n">100%</div><div class="l">Inspected &amp; tested</div></div></div>'+
+    '</div>'+
+    (feat?'<a class="hero-visual" href="#/equipment/'+esc(feat.slug)+'">'+slot(arr(feat.images)[0],true)+'<div class="ovl">'+statusBadge(feat.status)+esc(feat.title)+'</div></a>':'<div class="hero-visual">'+slot(null,true)+'</div>')+
+  '</div></div>'+
+  '<section><div class="wrap">'+
+    '<div class="head" style="display:flex;justify-content:space-between;align-items:flex-end;max-width:100%"><div><span class="eyebrow">Available now</span><h2 style="margin-top:8px">Featured inventory</h2></div><a class="btn btn-outline btn-sm" href="#/equipment">View all →</a></div>'+
+    '<div class="grid">'+(top3.length?top3.map(cardHTML).join(''):'<div style="grid-column:1/-1;color:var(--text-soft)">No listings yet. Add equipment in the admin.</div>')+'</div>'+
+  '</div></section>'+
+  '<section style="padding-top:0"><div class="wrap">'+
+    '<div class="head"><span class="eyebrow">Shop by process</span><h2 style="margin-top:8px">Find the right system</h2></div>'+
+    '<div class="cat-grid">'+CATS.map(function(c){return '<div class="cat" onclick="goCat(\''+c+'\')"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">'+catIcons[c]+'></svg></div><h3>'+c+'</h3><p>'+catMeta[c]+'</p>'+(SUBCATS[c]?'<div class="sub">'+SUBCATS[c].join(' · ')+'</div>':'')+'</div>';}).join('')+'</div>'+
+  '</div></section>'+
+  whyHTML()+sellBandHTML()+contactHTML(null);
+}
+
+function viewEquipment(params){
+  var activeCat=params.cat||'All';
+  var activeSub=params.sub||'';
+  var q=(window._q||'').toLowerCase();
+  var list=LISTINGS.filter(function(l){
+    if(activeCat!=='All' && l.category!==activeCat) return false;
+    if(activeSub && l.subcategory!==activeSub) return false;
+    if(q){ var hay=(l.title+' '+l.category+' '+(l.subcategory||'')+' '+(l.type||'')+' '+arr(l.tags).join(' ')+' '+arr(l.specs).map(function(s){return s.label+' '+s.value;}).join(' ')).toLowerCase(); if(hay.indexOf(q)<0) return false; }
+    return true;
+  });
+  var chips=['All'].concat(CATS).map(function(c){return '<button class="chip'+(c===activeCat?' active':'')+'" onclick="setFilter(\''+c+'\')">'+c+'</button>';}).join('');
+  var subs=SUBCATS[activeCat]?'<div class="subchips">'+SUBCATS[activeCat].map(function(s){return '<button class="subchip'+(s===activeSub?' active':'')+'" onclick="setSub(\''+s+'\')">'+s+'</button>';}).join('')+'</div>':'';
+  return '<div class="wrap"><section style="padding-top:40px">'+
+    '<div class="crumb"><a href="#/">Home</a> <span>›</span> Equipment</div>'+
+    '<div class="head" style="max-width:100%;margin-bottom:22px"><span class="eyebrow">Inventory</span><h2 style="margin-top:8px">Used Extraction &amp; Processing Equipment</h2></div>'+
+    '<div class="filterbar"><div class="chips">'+chips+'</div>'+subs+
+      '<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">'+
+      '<div class="searchwrap"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input id="search" placeholder="Search by name, spec, or keyword…" value="'+esc(window._q||'')+'"></div>'+
+      '<span class="resultcount">'+list.length+' item'+(list.length===1?'':'s')+'</span></div>'+
+    '</div>'+
+    '<div class="grid">'+(list.length?list.map(cardHTML).join(''):'<div style="grid-column:1/-1;color:var(--text-soft);padding:40px 0;text-align:center;border:1px dashed var(--border);border-radius:12px">No matches — try a different category or search term.</div>')+'</div>'+
+  '</section></div>';
+}
+
+function viewDetail(slug){
+  var l=bySlug(slug); if(!l) return '<div class="wrap"><section><p style="color:var(--text-soft)">Listing not found. <a href="#/equipment" style="color:var(--accent)">Back to inventory</a></p></section></div>';
+  var imgs=arr(l.images); window._gal=imgs;
+  var thumbs='';
+  if(imgs.length>1){ for(var i=0;i<imgs.length;i++){ thumbs+='<div class="t'+(i===0?' active':'')+'" data-i="'+i+'" onclick="setMain('+i+')">'+slot(imgs[i])+'</div>'; } }
+  var price=hasPrice(l)?'<div class="dt-price">'+esc(l.price)+'</div>':'<div class="dt-price quote">Request Quote</div>';
+  var metaRows=[];
+  if(l.manufacturer) metaRows.push(['Manufacturer',l.manufacturer]);
+  metaRows.push(['Category',l.category+(l.subcategory?' · '+l.subcategory:'')]);
+  if(l.condition) metaRows.push(['Condition',l.condition]);
+  if(l.location) metaRows.push(['Location',l.location]);
+  var meta=metaRows.map(function(r){return '<div class="r"><span>'+esc(r[0])+'</span><b>'+esc(r[1])+'</b></div>';}).join('');
+  var tags=arr(l.tags).length?'<div class="dt-tags">'+arr(l.tags).map(function(t){return '<span class="tg">'+esc(t)+'</span>';}).join('')+'</div>':'';
+  var secs='';
+  if(l.overview) secs+='<div class="dt-sec"><h3>Overview</h3><p>'+esc(l.overview)+'</p></div>';
+  if(arr(l.throughput).length) secs+='<div class="dt-sec"><h3>Throughput</h3><ul class="check">'+arr(l.throughput).map(function(t){return '<li>'+esc(t)+'</li>';}).join('')+'</ul></div>';
+  if(arr(l.included).length) secs+='<div class="dt-sec"><h3>What\'s included</h3><ul class="check">'+arr(l.included).map(function(t){return '<li>'+esc(t)+'</li>';}).join('')+'</ul></div>';
+  if(arr(l.specs).length){ var rows=arr(l.specs).map(function(s){return '<tr><td>'+esc(s.label)+'</td><td>'+esc(s.value)+'</td></tr>';}).join(''); secs+='<div class="dt-sec"><h3>Technical specifications</h3><table class="spectable">'+rows+'</table></div>'; }
+  if(l.inspection) secs+='<div class="dt-sec"><h3>Inspection notes</h3><p>'+esc(l.inspection)+'</p></div>';
+  if(l.logistics) secs+='<div class="dt-sec"><h3>Shipping &amp; logistics</h3><p>'+esc(l.logistics)+'</p></div>';
+  var rel=LISTINGS.filter(function(x){return x.category===l.category && x.slug!==l.slug;}).slice(0,3);
+  var related=rel.length?'<div class="related"><h3>Related equipment</h3><div class="grid">'+rel.map(cardHTML).join('')+'</div></div>':'';
+  return '<div class="wrap"><section style="padding-top:34px">'+
+    '<div class="crumb"><a href="#/">Home</a> <span>›</span> <a href="#/equipment">Equipment</a> <span>›</span> <a href="#/equipment?cat='+encodeURIComponent(l.category)+'">'+esc(l.category)+'</a> <span>›</span> '+esc(l.title)+'</div>'+
+    '<div class="detail">'+
+      '<div class="gallery"><div class="main" id="mainImg">'+slot(imgs[0],true)+'</div>'+(thumbs?'<div class="thumbs">'+thumbs+'</div>':'')+'</div>'+
+      '<div class="dt-head">'+statusBadge(l.status)+'<h1 style="margin-top:12px">'+esc(l.title)+'</h1><div class="dt-sub">'+esc(l.category)+(l.type?' — '+esc(l.type):'')+'</div>'+
+        price+'<div class="dt-meta">'+meta+'</div>'+
+        '<div class="dt-cta"><a class="btn btn-primary" href="#/contact?item='+esc(l.slug)+'">Request a Quote</a><a class="btn btn-outline" href="#/contact?item='+esc(l.slug)+'">Ask a Technical Question</a></div>'+
+        '<div style="margin-top:14px;font-size:13.5px;color:var(--text-soft)">Need it installed or dialed in? <a href="#/consulting" style="color:var(--accent);font-weight:600">Talk to an expert →</a></div>'+
+        tags+
+      '</div>'+
+    '</div>'+
+    '<div class="dt-sections">'+secs+'</div>'+related+
+  '</section></div>';
+}
+
+function viewConsulting(){
+  var svcs=[["Finish your build","Bought a system and need it installed, plumbed, wired, and commissioned? We get used equipment running and validated on your floor.",'<path d="M6 2v6l-3 4v10h18V12l-3-4V2"/><path d="M6 8h12"/'],["Optimize your process","Dial in throughput, yield, color, and consistency across extraction, distillation, and post-processing.",'<path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/'],["Custom solutions","Spec, source, and configure a system around your facility, target throughput, and end product.",'<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M9 9h6v6H9z"/'],["Compliance &amp; GMP","Facility readiness, SOPs, and audit prep — Lean Six Sigma and cGMP support from people who have run the floor.",'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/']];
+  var steps=[["01","Tell us your goal","Share what you bought or want to build, and where you are stuck."],["02","We scope it","A clear plan — install, optimize, or spec a full solution."],["03","We get it running","Hands-on support to commission, tune, and document."]];
+  return '<div class="wrap"><section style="padding-top:40px">'+
+    '<div class="crumb"><a href="#/">Home</a> <span>›</span> Consulting</div>'+
+    '<div class="head" style="max-width:680px"><span class="eyebrow">Ask the expert</span><h2 style="margin-top:8px;font-size:34px">Need help finishing a build or dialing in a process?</h2><p>Buying used equipment is only half the battle. We help you install it, optimize it, or build a custom solution — hands-on, from operators who actually run extraction and distillation lines.</p><div style="margin-top:22px"><a class="btn btn-primary" href="#/contact?item=consulting">Talk to an expert</a></div></div>'+
+    '<div class="vp-grid" style="margin-top:46px">'+svcs.map(function(s){return '<div class="cat" style="cursor:default"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">'+s[2]+'></svg></div><h3>'+s[0]+'</h3><p>'+s[1]+'</p></div>';}).join('')+'</div>'+
+    '<div style="margin-top:54px"><div class="head" style="max-width:100%"><span class="eyebrow">How it works</span><h2 style="margin-top:8px;font-size:26px">From stuck to running</h2></div>'+
+      '<div class="cat-grid" style="grid-template-columns:repeat(3,1fr)">'+steps.map(function(st){return '<div class="cat" style="cursor:default"><div style="font-family:\'Space Grotesk\';font-weight:700;color:var(--accent);font-size:14px;letter-spacing:.06em">'+st[0]+'</div><h3 style="margin-top:10px">'+st[1]+'</h3><p style="margin-top:6px">'+st[2]+'</p></div>';}).join('')+'</div></div>'+
+    '<div style="margin-top:50px"><div class="band"><div><span class="eyebrow">Ask the expert</span><h2 style="margin-top:6px">Have a build or process challenge?</h2><p>Tell us what you are working on — we will help you get it running, compliant, and dialed in.</p></div><a class="btn btn-primary" href="#/contact?item=consulting">Request a consult →</a></div></div>'+
+  '</section></div>';
+}
+
+function web3Hidden(subject,extra){
+  return '<input type="hidden" name="access_key" value="'+WEB3KEY+'">'+
+    '<input type="hidden" name="subject" value="'+esc(subject)+'">'+
+    '<input type="hidden" name="from_name" value="Used Extraction Co. Website">'+
+    '<input type="hidden" name="redirect" value="'+THANKS+'">'+
+    '<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">'+
+    (extra||'');
+}
+
+function viewSell(){
+  return '<div class="wrap"><section style="padding-top:40px">'+
+    '<div class="crumb"><a href="#/">Home</a> <span>›</span> Sell Your Equipment</div>'+
+    '<div class="contact-grid">'+
+      '<div><div class="head" style="max-width:100%;margin-bottom:18px"><span class="eyebrow">Sell here</span><h2 style="margin-top:8px">Have equipment to sell?</h2><p>Tell us what you have. We buy and consign used extraction, distillation, and processing equipment — and we handle inspection, listing, and freight.</p></div>'+
+        '<div class="info-card"><div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg></span><div><b>Fair, fast offers</b><span>Tell us the make/model and condition — we turn quotes around quickly.</span></div></div>'+
+        '<div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7"/></svg></span><div><b>We handle logistics</b><span>Crating, rigging, and freight coordinated for you.</span></div></div></div></div>'+
+      '<form class="form" action="https://api.web3forms.com/submit" method="POST">'+web3Hidden('Equipment offered for sale — Used Extraction Co.','<input type="hidden" name="inquiry_type" value="Sell equipment">')+
+        '<div class="two"><div class="field"><label>Name</label><input name="name" required placeholder="Your name"></div><div class="field"><label>Company</label><input name="company" placeholder="Company"></div></div>'+
+        '<div class="two"><div class="field"><label>Email</label><input type="email" name="email" required placeholder="you@company.com"></div><div class="field"><label>Phone</label><input name="phone" placeholder="(000) 000-0000"></div></div>'+
+        '<div class="field"><label>Equipment you\'re selling</label><input name="equipment" placeholder="e.g. Used 50L wiped film system, make/model"></div>'+
+        '<div class="field"><label>Condition &amp; details</label><textarea name="message" rows="4" placeholder="Age, condition, what\'s included, photos available, location…"></textarea></div>'+
+        '<button class="btn btn-primary" style="width:100%" type="submit">Submit equipment</button>'+
+      '</form>'+
+    '</div>'+
+  '</section></div>';
+}
+
+function whyHTML(){
+  var vps=[["Inspected &amp; tested","Every unit checked and documented before it\'s listed.",'<path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/'],["Freight &amp; crating","Crating, rigging, and nationwide freight handled for you.",'<rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 3v5h-7"/'],["Documentation","Specs, photos, and known history on every machine.",'<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/'],["Technical support","Real operators who know the gear, before and after the sale.",'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/']];
+  return '<section><div class="wrap"><div class="head"><span class="eyebrow">Why buy from us</span><h2 style="margin-top:8px">Used equipment, without the guesswork</h2></div>'+
+    '<div class="vp-grid">'+vps.map(function(v){return '<div class="vp"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">'+v[2]+'></svg></div><h3>'+v[0]+'</h3><p>'+v[1]+'</p></div>';}).join('')+'</div></div></section>';
+}
+function sellBandHTML(){
+  return '<section style="padding-top:0"><div class="wrap"><div class="band"><div><span class="eyebrow">Sell here</span><h2 style="margin-top:6px">Have equipment to sell?</h2><p>We buy and consign used extraction, distillation, and processing equipment — inspection and freight handled.</p></div><a class="btn btn-primary" href="#/sell">Sell your equipment →</a></div></div></section>';
+}
+function contactHTML(prefillSlug){
+  var consulting=(prefillSlug==='consulting');
+  var item=(prefillSlug && !consulting)?bySlug(prefillSlug):null;
+  var subject=item?('Quote request: '+item.title):(consulting?'Consulting inquiry — Used Extraction Co.':'New quote request — Used Extraction Co.');
+  var note=item?'<div class="prefill-note">Quoting: <b>'+esc(item.title)+'</b> &nbsp;·&nbsp; we\'ll reference this exact item.</div>':(consulting?'<div class="prefill-note">Consulting inquiry — tell us about your build or process and we\'ll connect you with the right expert.</div>':'');
+  var msgVal=item?('I\'m interested in: '+item.title):(consulting?'I\'d like help with: (finishing a build / optimizing a process / a custom solution)':'');
+  var extra=item?'<input type="hidden" name="listing" value="'+esc(item.title+' — #/equipment/'+item.slug)+'">':(consulting?'<input type="hidden" name="inquiry_type" value="Consulting">':'');
+  return '<section id="contact"><div class="wrap"><div class="contact-grid">'+
+    '<div><div class="head" style="max-width:100%;margin-bottom:18px"><span class="eyebrow">Get in touch</span><h2 style="margin-top:8px">Request a quote</h2><p>Tell us what you\'re after and we\'ll get back within one business day.</p></div>'+
+      '<div class="info-card"><div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.79 19.79 0 0 1 3.07 4.18 2 2 0 0 1 5.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span><div><b>(714) 555-0123</b><span>Mon–Fri, 8am–5pm PT</span></div></div>'+
+      '<div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span><div><b>sales@usedextraction.com</b><span>We reply within 24 hours</span></div></div>'+
+      '<div class="info-row"><span class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0Z"/><circle cx="12" cy="10" r="3"/></svg></span><div><b>Anaheim, California</b><span>Warehouse visits by appointment</span></div></div></div></div>'+
+    '<form class="form" action="https://api.web3forms.com/submit" method="POST">'+web3Hidden(subject,extra)+note+
+      '<div class="two"><div class="field"><label>Name</label><input name="name" required placeholder="Your name"></div><div class="field"><label>Company</label><input name="company" placeholder="Company"></div></div>'+
+      '<div class="two"><div class="field"><label>Email</label><input type="email" name="email" required placeholder="you@company.com"></div><div class="field"><label>Phone</label><input name="phone" placeholder="(000) 000-0000"></div></div>'+
+      '<div class="field"><label>Message</label><textarea name="message" rows="4" placeholder="What are you processing, and what\'s your target throughput?">'+esc(msgVal)+'</textarea></div>'+
+      '<button class="btn btn-primary" style="width:100%" type="submit">Send request</button>'+
+    '</form>'+
+  '</div></div></section>';
+}
+
+function setFilter(c){ window._sub=''; location.hash='#/equipment?cat='+encodeURIComponent(c); }
+function setSub(s){ var cat=parseParams().cat||'All'; location.hash='#/equipment?cat='+encodeURIComponent(cat)+'&sub='+encodeURIComponent(s); }
+function setMain(i){ document.getElementById('mainImg').innerHTML=slot((window._gal||[])[i],true); var ts=document.querySelectorAll('.thumbs .t'); for(var k=0;k<ts.length;k++){ ts[k].classList.toggle('active', +ts[k].getAttribute('data-i')===i); } }
+function parseParams(){ var h=location.hash.slice(1); var qi=h.indexOf('?'); var p={}; if(qi>=0){ h.slice(qi+1).split('&').forEach(function(kv){var a=kv.split('=');p[a[0]]=decodeURIComponent(a[1]||'');}); } return p; }
+
+function router(){
+  var app=document.getElementById('app');
+  if(!LOADED){ app.innerHTML='<div class="wrap"><section><p style="color:var(--text-soft)">Loading inventory…</p></section></div>'; return; }
+  var h=location.hash.slice(1)||'/';
+  var path=h.split('?')[0];
+  var params=parseParams();
+  if(path==='/'||path===''){ app.innerHTML=viewHome(); }
+  else if(path==='/equipment'){ app.innerHTML=viewEquipment({cat:params.cat||'All',sub:params.sub||''}); var s=document.getElementById('search'); if(s){ s.addEventListener('input',function(){ window._q=this.value; var car=this.selectionStart; app.innerHTML=viewEquipment({cat:params.cat||'All',sub:params.sub||''}); var s2=document.getElementById('search'); if(s2){s2.focus(); s2.setSelectionRange(car,car);} }); } }
+  else if(path.indexOf('/equipment/')===0){ app.innerHTML=viewDetail(path.slice('/equipment/'.length)); }
+  else if(path==='/sell'){ app.innerHTML=viewSell(); }
+  else if(path==='/consulting'){ app.innerHTML=viewConsulting(); }
+  else if(path==='/contact'){ app.innerHTML=contactHTML(params.item||null); }
+  else if(path==='/why'){ app.innerHTML='<div class="wrap"><div class="crumb" style="margin-top:30px"><a href="#/">Home</a> <span>›</span> Why Us</div></div>'+whyHTML()+contactHTML(null); }
+  else { app.innerHTML=viewHome(); }
+  var navlinks=document.querySelectorAll('[data-nav]');
+  for(var n=0;n<navlinks.length;n++){ var nm=navlinks[n].getAttribute('data-nav'); navlinks[n].classList.toggle('active', ('/'+nm)===path || (path.indexOf('/equipment')===0 && nm==='equipment')); }
+  window.scrollTo(0,0);
+}
+window.addEventListener('hashchange',router);
+
+fetch('listings.json?cb='+Date.now()).then(function(r){return r.json();}).then(function(data){
+  LISTINGS=((data&&data.items)?data.items:[]).filter(function(l){return (l.status||'').toLowerCase()!=='hidden';});
+  LISTINGS.forEach(function(l){
+    if(!l.slug) l.slug=String(l.title||'item').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'');
+    l.tags=arr(l.tags); l.throughput=arr(l.throughput); l.included=arr(l.included); l.specs=arr(l.specs); l.images=arr(l.images);
+  });
+  LOADED=true; router();
+}).catch(function(){ LOADED=true; LISTINGS=[]; router(); });
 </script>
+<!-- used-extraction catalog v2 -->
 </body>
 </html>
