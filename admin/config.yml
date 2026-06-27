@@ -28,18 +28,60 @@ collections:
       - name: "listings"
         label: "Equipment Listings"
         file: "listings.json"
-        description: "Add, edit, or remove equipment. Each item appears in the Inventory section of the website."
+        description: "Add, edit, or remove equipment. Each item gets its own page on the website with a photo gallery, specs, and details."
         fields:
           - label: "Listings"
             name: "items"
             label_singular: "Listing"
             widget: "list"
-            summary: "{{fields.name}} — {{fields.status}}"
+            summary: "{{fields.title}} — {{fields.status}}"
             fields:
-              - { label: "Equipment name", name: "name", widget: "string", hint: "e.g. Wiped Film Evaporator — 6 inch" }
-              - { label: "Category", name: "category", widget: "select", options: ["Wiped Film", "Ethanol", "Hydrocarbon", "Post-Processing"], required: false }
-              - { label: "Specs", name: "specs", widget: "string", required: false, hint: "e.g. Stainless 316L · 2024 · ~1.5 L/hr" }
-              - { label: "Price", name: "price", widget: "string", required: false, hint: "e.g. $48,500 OBO. Leave blank to show 'Inquire for price'." }
+              - { label: "Equipment name", name: "title", widget: "string", hint: "e.g. Chemtech KD6 Wiped Film Evaporator" }
+              - { label: "Page address (slug)", name: "slug", widget: "string", hint: "lowercase-with-dashes, e.g. chemtech-kd6-wiped-film. This becomes the link to the listing." }
+              - { label: "Category", name: "category", widget: "select", options: ["Extraction", "Distillation", "Solvent Recovery", "Post Processing"] }
+              - { label: "Sub-category (Extraction only)", name: "subcategory", widget: "select", options: ["", "Ethanol", "Hydrocarbon"], required: false, default: "", hint: "Only used for Extraction. Leave blank otherwise." }
+              - { label: "Type", name: "type", widget: "string", required: false, hint: "e.g. Wiped Film Evaporator" }
               - { label: "Status", name: "status", widget: "select", options: ["Available", "Pending", "Sold", "Hidden"], default: "Available", hint: "Choose 'Hidden' to take an item off the site without deleting it." }
-              - { label: "Photo", name: "image", widget: "image", required: false, choose_url: false }
-              - { label: "Feature on homepage", name: "featured", widget: "boolean", default: false, required: false, hint: "Show this machine as the big hero image at the top of the homepage. Needs a photo." }
+              - { label: "Price", name: "price", widget: "string", required: false, hint: "e.g. $67,000. Leave blank to show 'Request Quote'." }
+              - { label: "Location", name: "location", widget: "string", required: false, default: "Anaheim, CA" }
+              - { label: "Condition", name: "condition", widget: "string", required: false, hint: "e.g. Used — Tested & Running" }
+              - { label: "Manufacturer", name: "manufacturer", widget: "string", required: false }
+              - { label: "Model", name: "model", widget: "string", required: false }
+              - { label: "Year", name: "year", widget: "string", required: false }
+              - { label: "Feature on homepage", name: "featured", widget: "boolean", default: false, required: false, hint: "Show this machine as the big hero image at the top of the homepage." }
+              - label: "Photos (gallery)"
+                name: "images"
+                widget: "list"
+                required: false
+                field: { label: "Photo", name: "image", widget: "image" }
+                hint: "First photo is used as the main image and homepage hero."
+              - label: "Tags / badges"
+                name: "tags"
+                widget: "list"
+                required: false
+                field: { label: "Tag", name: "tag", widget: "string" }
+                hint: "Short keywords, e.g. Turnkey, UL Listed, C1D1."
+              - { label: "Short description", name: "short", widget: "string", required: false, hint: "One line shown in search results and previews." }
+              - { label: "Overview", name: "overview", widget: "text", required: false, hint: "The main description paragraph on the listing page." }
+              - label: "Throughput"
+                name: "throughput"
+                widget: "list"
+                required: false
+                field: { label: "Line", name: "line", widget: "string" }
+                hint: "One bullet per line, e.g. 'Terpene strip: 1–2 L/hr'."
+              - label: "What's included"
+                name: "included"
+                widget: "list"
+                required: false
+                field: { label: "Item", name: "item", widget: "string" }
+                hint: "One item per line."
+              - label: "Specifications"
+                name: "specs"
+                widget: "list"
+                required: false
+                summary: "{{fields.label}}: {{fields.value}}"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+              - { label: "Inspection notes", name: "inspection", widget: "text", required: false }
+              - { label: "Shipping & logistics", name: "logistics", widget: "text", required: false }
