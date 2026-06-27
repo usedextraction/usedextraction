@@ -40,6 +40,15 @@
       "specs": "316l, gmp, asme, automated",
       "price": "400000",
       "image": ""
+    },
+    {
+      "status": "Available",
+      "featured": false,
+      "name": "Pinnacle SRS 100 Rising Film ",
+      "category": "Ethanol",
+      "specs": "100 liters an hour. turn key ",
+      "price": "$50,000 OBO ",
+      "image": "/images/uploads/img_5773.jpeg"
     }
   ]
 }
