@@ -37,24 +37,23 @@ collections:
             summary: "{{fields.title}} — {{fields.status}}"
             fields:
               - { label: "Equipment name", name: "title", widget: "string", hint: "e.g. Chemtech KD6 Wiped Film Evaporator" }
-              - { label: "Page address (slug)", name: "slug", widget: "string", hint: "lowercase-with-dashes, e.g. chemtech-kd6-wiped-film. This becomes the link to the listing." }
               - { label: "Category", name: "category", widget: "select", options: ["Extraction", "Distillation", "Solvent Recovery", "Post Processing"] }
               - { label: "Sub-category (Extraction only)", name: "subcategory", widget: "select", options: ["", "Ethanol", "Hydrocarbon"], required: false, default: "", hint: "Only used for Extraction. Leave blank otherwise." }
               - { label: "Type", name: "type", widget: "string", required: false, hint: "e.g. Wiped Film Evaporator" }
               - { label: "Status", name: "status", widget: "select", options: ["Available", "Pending", "Sold", "Hidden"], default: "Available", hint: "Choose 'Hidden' to take an item off the site without deleting it." }
               - { label: "Price", name: "price", widget: "string", required: false, hint: "e.g. $67,000. Leave blank to show 'Request Quote'." }
-              - { label: "Location", name: "location", widget: "string", required: false, default: "Anaheim, CA" }
-              - { label: "Condition", name: "condition", widget: "string", required: false, hint: "e.g. Used — Tested & Running" }
-              - { label: "Manufacturer", name: "manufacturer", widget: "string", required: false }
-              - { label: "Model", name: "model", widget: "string", required: false }
-              - { label: "Year", name: "year", widget: "string", required: false }
-              - { label: "Feature on homepage", name: "featured", widget: "boolean", default: false, required: false, hint: "Show this machine as the big hero image at the top of the homepage." }
               - label: "Photos (gallery)"
                 name: "images"
                 widget: "list"
                 required: false
                 field: { label: "Photo", name: "image", widget: "image" }
-                hint: "First photo is used as the main image and homepage hero."
+                hint: "Click 'Add Photo' for each image. The first photo is the main image and the homepage hero. Add as many as you like."
+              - { label: "Condition", name: "condition", widget: "string", required: false, hint: "e.g. Used — Tested & Running" }
+              - { label: "Location", name: "location", widget: "string", required: false, default: "Anaheim, CA" }
+              - { label: "Manufacturer", name: "manufacturer", widget: "string", required: false }
+              - { label: "Model", name: "model", widget: "string", required: false }
+              - { label: "Year", name: "year", widget: "string", required: false }
+              - { label: "Feature on homepage", name: "featured", widget: "boolean", default: false, required: false, hint: "Show this machine as the big hero image at the top of the homepage." }
               - label: "Tags / badges"
                 name: "tags"
                 widget: "list"
@@ -85,3 +84,4 @@ collections:
                   - { label: "Value", name: "value", widget: "string" }
               - { label: "Inspection notes", name: "inspection", widget: "text", required: false }
               - { label: "Shipping & logistics", name: "logistics", widget: "text", required: false }
+              - { label: "Custom URL (optional)", name: "slug", widget: "string", required: false, hint: "Leave blank — the link is created automatically from the equipment name. Only fill this in if you want a specific custom link." }
