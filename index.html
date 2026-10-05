@@ -239,7 +239,7 @@ var SUBCATS={"Extraction":["Ethanol","Hydrocarbon"]};
 var LISTINGS=[]; var LOADED=false;
 
 var WEB3KEY="c2f72d91-e1c0-4787-bb4e-e5425dd65dc6";
-var THANKS="https://usedextraction1.netlify.app/thanks.html";
+var THANKS=location.origin+location.pathname.replace(/[^/]*$/,"")+"thanks.html";
 
 function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
 function bySlug(s){for(var i=0;i<LISTINGS.length;i++){if(LISTINGS[i].slug===s)return LISTINGS[i];}return null;}
