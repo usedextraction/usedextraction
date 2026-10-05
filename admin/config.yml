@@ -15,7 +15,7 @@ auth:
   last_name_claim: last_name
   avatar_url_claim: avatar_url
 
-site_url: https://usedextraction1.netlify.app
+site_url: https://usedextraction.com
 
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
